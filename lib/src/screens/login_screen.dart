@@ -1,5 +1,6 @@
 import 'package:app_chat/src/widgets/app_burton.dart';
 import 'package:app_chat/src/widgets/app_icon.dart';
+import 'package:app_chat/src/widgets/app_textfield.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -12,24 +13,10 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextField getTextField(String inputText) {
-    return TextField(
-      decoration: InputDecoration(
-          contentPadding:
-              EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-          hintText: inputText,
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(32.0))),
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(32.0)),
-              borderSide:
-                  BorderSide(color: Colors.lightBlueAccent, width: 2.0))),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Colors.green,
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24),
         child: Column(
@@ -40,11 +27,17 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: 48.0,
             ),
-            getTextField("Ingrese email"),
+            AppTextField(
+              inputText: "Ingrese Email",
+            ),
+            // getTextField("Ingrese email"),
             SizedBox(
               height: 8.0,
             ),
-            getTextField("Ingrese la contraseña"),
+            // getTextField("Ingrese la contraseña"),
+            AppTextField(
+              inputText: "Ingrese email",
+            ),
             SizedBox(
               height: 23.0,
             ),
