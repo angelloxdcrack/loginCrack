@@ -33,7 +33,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
             AppButton(
               color: Colors.blueAccent,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/registration');
+              },
               name: 'Registrarse',
             ),
           ],

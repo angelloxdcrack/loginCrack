@@ -3,20 +3,15 @@ import 'package:app_chat/src/widgets/app_icon.dart';
 import 'package:app_chat/src/widgets/app_textfield.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
-  //Propiedad Estatica
-
-  static const String routeName = "/login";
-
-  @override
-  _LoginScreenState createState() => _LoginScreenState();
+class RegistrationScreen extends StatefulWidget {
+  static const String routeName = "/registration";
+  _RegistrationScreenState createState() => new _RegistrationScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.green,
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24),
         child: Column(
@@ -30,22 +25,17 @@ class _LoginScreenState extends State<LoginScreen> {
             AppTextField(
               inputText: "Ingrese el email",
             ),
-            // getTextField("Ingrese email"),
             SizedBox(
               height: 8.0,
             ),
-            // getTextField("Ingrese la contraseña"),
             AppTextField(
               inputText: "Ingrese la contraseña",
-            ),
-            SizedBox(
-              height: 23.0,
             ),
             AppButton(
               color: Colors.blueAccent,
               onPressed: () {},
-              name: 'Log in',
-            ),
+              name: "Registrarse",
+            )
           ],
         ),
       ),
